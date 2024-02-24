@@ -1,0 +1,11 @@
+/* BottomSection.css */
+.bottom-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .bottom-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  

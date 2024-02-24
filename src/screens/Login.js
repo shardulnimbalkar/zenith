@@ -5,12 +5,15 @@ import { Button, Container, TextField, Typography } from "@mui/material";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login status
   const navigate = useNavigate();
 
   const handleLogin = () => {
     // Add your authentication logic here
     // For simplicity, let's assume a successful login for any non-empty username and password
     if (username.trim() !== "" && password.trim() !== "") {
+      // Set login status to true
+      setIsLoggedIn(true);
       // Redirect to the Job Profile Upload page after successful login
       navigate("/job-profile-upload");
     } else {
@@ -22,8 +25,8 @@ const Login = () => {
   return (
     <Container component="main" maxWidth="xs">
       <div style={containerStyle}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Zenith AI Aggregator
+        <Typography variant="h4" component="h1" gutterBottom fontStyle='Roboto'>
+          Hire Hub
         </Typography>
         <div style={formStyle}>
           <TextField
